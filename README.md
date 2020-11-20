@@ -1,2 +1,2 @@
-# alura-heranca-byte-herdado
-Exemplo simples de uso de herança em Java.
+# Alura
+Projetos criados em cursos da alura.
