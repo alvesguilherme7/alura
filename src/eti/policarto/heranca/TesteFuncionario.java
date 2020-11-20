@@ -1,4 +1,4 @@
-package eti.policarto;
+package eti.policarto.heranca;
 
 public class TesteFuncionario {
     public static void main(String[] args) {
