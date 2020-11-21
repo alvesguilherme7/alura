@@ -1,4 +1,4 @@
-package eti.policarto.heranca;
+package eti.policarto.herancafuncionario;
 
 public class ControleBonificacao {
     private double soma;

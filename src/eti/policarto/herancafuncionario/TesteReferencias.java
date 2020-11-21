@@ -1,4 +1,4 @@
-package eti.policarto.heranca;
+package eti.policarto.herancafuncionario;
 
 public class TesteReferencias {
     public static void main(String[] args) {

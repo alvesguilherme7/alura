@@ -1,6 +1,4 @@
-package eti.policarto.heranca;
-
-import eti.policarto.heranca.Funcionario;
+package eti.policarto.herancafuncionario;
 
 public class Gerente extends Funcionario {
     private int senha;

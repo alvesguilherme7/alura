@@ -1,4 +1,4 @@
-package eti.policarto.heranca;
+package eti.policarto.herancafuncionario;
 
 public abstract class Funcionario {
     private String nome;
