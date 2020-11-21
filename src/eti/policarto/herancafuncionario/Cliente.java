@@ -1,13 +1,8 @@
 package eti.policarto.herancafuncionario;
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Cliente implements Autenticavel{
 
     private int senha;
-
-    @Override
-    public double getBonificacao() {
-        return 200;
-    }
 
     @Override
     public void setSenha(int senha){
