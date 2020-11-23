@@ -1,4 +1,4 @@
-package eti.policarto.javapilha;
+package eti.policarto.execoes;
 
 public class MinhaException extends Exception {
 
