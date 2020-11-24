@@ -3,8 +3,10 @@ package eti.policarto.herancaconta.teste;
 import eti.policarto.herancaconta.model.ContaCorrente;
 import eti.policarto.herancaconta.model.ContaPoupanca;
 
+import java.io.IOException;
+
 public class TesteContas {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ContaCorrente cc = new ContaCorrente(111,111);
         cc.deposita(100.0);
 
