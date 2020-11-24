@@ -1,6 +1,6 @@
 package eti.policarto.execoes;
 
-import eti.policarto.herancaconta.Cliente;
+import eti.policarto.herancaconta.model.Cliente;
 
 public abstract class Conta {
 

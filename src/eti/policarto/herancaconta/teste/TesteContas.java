@@ -1,4 +1,7 @@
-package eti.policarto.herancaconta;
+package eti.policarto.herancaconta.teste;
+
+import eti.policarto.herancaconta.model.ContaCorrente;
+import eti.policarto.herancaconta.model.ContaPoupanca;
 
 public class TesteContas {
     public static void main(String[] args) {

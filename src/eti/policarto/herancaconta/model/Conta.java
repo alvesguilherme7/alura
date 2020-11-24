@@ -1,4 +1,4 @@
-package eti.policarto.herancaconta;
+package eti.policarto.herancaconta.model;
 
 public abstract class Conta {
 
