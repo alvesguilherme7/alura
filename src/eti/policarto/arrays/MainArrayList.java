@@ -6,7 +6,7 @@ public class MainArrayList {
 
     public static void main(String[] args){
 
-        // melhor performance em busca e iteração
+        // melhor performance em busca e iteração - implementa a inerface List
         ArrayList<Conta> lista = new ArrayList<>();
 
         Conta cc1 = new ContaCorrente(22, 22);

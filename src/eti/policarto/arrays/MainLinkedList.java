@@ -6,7 +6,7 @@ public class MainLinkedList {
 
     public static void main(String[] args){
 
-        // melhor performance em inserções e remoções
+        // melhor performance em inserções e remoções - implementa a inerface List
         LinkedList<Conta> lista = new LinkedList<>();
 
         Conta cc1 = new ContaCorrente(22, 22);
