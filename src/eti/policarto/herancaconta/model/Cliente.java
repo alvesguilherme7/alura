@@ -1,5 +1,11 @@
-package eti.policarto.herancaconta;
+package eti.policarto.herancaconta.model;
 
+/**
+ * Classe que representa um cliente no ByteBank
+ *
+ * @author Guilherme Alves
+ * @version 0.1
+ */
 public class Cliente {
 
     private String nome;
