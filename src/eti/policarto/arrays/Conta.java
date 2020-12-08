@@ -107,4 +107,13 @@ public abstract class Conta {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "saldo=" + saldo +
+                ", agencia=" + agencia +
+                ", numero=" + numero +
+                ", titular=" + titular +
+                '}';
+    }
 }
