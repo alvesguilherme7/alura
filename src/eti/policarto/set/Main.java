@@ -6,18 +6,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Set<String> alunos = new HashSet<>();
-        alunos.add("Paulo");
-        alunos.add("Alberto");
-        alunos.add("Pedro");
-        alunos.add("Nico");
+        Curso cursoJavaColecoes = new Curso("Dominando as colecoes do Java", "Paulo Silveira");
 
-        System.out.println(alunos.size());//4
+        Aluno a1 = new Aluno("Rodrigo Turini", 34672);
+        Aluno a2 = new Aluno("Guilherme Silveira", 5617);
+        Aluno a3 = new Aluno("Mauricio Aniche", 17645);
+        Aluno a4 = new Aluno("Mauricio Aniche", 17645);
 
-        alunos.add("Nico");
+        cursoJavaColecoes.addAluno(a1);
+        cursoJavaColecoes.addAluno(a2);
+        cursoJavaColecoes.addAluno(a3);
+        cursoJavaColecoes.addAluno(a4);
 
-        System.out.println(alunos.size());//4
+        Set<Aluno> alunos = cursoJavaColecoes.getAlunos();
+
+        try{
+            alunos.add(a4);
+        } catch (UnsupportedOperationException e){
+        }
 
         alunos.forEach(System.out::println);
+
+        boolean matriculado = cursoJavaColecoes.alunoEstaMatriculado(a4);
+        System.out.println(matriculado);
+
+
     }
 }
