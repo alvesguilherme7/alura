@@ -8,7 +8,7 @@ import eti.policarto.herancaconta.model.Cliente;
  * @author Guilherme Alves
  * @version 0.1
  */
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta> {
 
     protected double saldo;
     private int agencia;
@@ -113,7 +113,12 @@ public abstract class Conta {
                 "saldo=" + saldo +
                 ", agencia=" + agencia +
                 ", numero=" + numero +
-                ", titular=" + titular +
+                ", titular=" + titular.getNome() +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Conta o) {
+        return this.getTitular().getNome().compareTo(o.getTitular().getNome());
     }
 }
