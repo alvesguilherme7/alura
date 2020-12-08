@@ -1,9 +1,8 @@
-package eti.policarto.arrays;
+package eti.policarto.arrays.conta;
 
 import eti.policarto.herancaconta.model.Cliente;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class MainArrayList2 {
     public static void main(String[] args) {

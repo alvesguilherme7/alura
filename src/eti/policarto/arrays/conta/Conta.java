@@ -1,4 +1,4 @@
-package eti.policarto.arrays;
+package eti.policarto.arrays.conta;
 
 import eti.policarto.herancaconta.model.Cliente;
 
