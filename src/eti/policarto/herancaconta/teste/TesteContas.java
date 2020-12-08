@@ -1,0 +1,22 @@
+package eti.policarto.herancaconta.teste;
+
+import eti.policarto.herancaconta.model.ContaCorrente;
+import eti.policarto.herancaconta.model.ContaPoupanca;
+
+import java.io.IOException;
+
+public class TesteContas {
+    public static void main(String[] args) throws IOException {
+        ContaCorrente cc = new ContaCorrente(111,111);
+        cc.deposita(100.0);
+
+        ContaPoupanca cp =new ContaPoupanca(222,222);
+        cp.deposita(100.0);
+
+        cc.transfere(10,cp);
+
+        System.out.println("CC: " + cc.getSaldo());
+        System.out.println("CP: " + cp.getSaldo());
+
+    }
+}
