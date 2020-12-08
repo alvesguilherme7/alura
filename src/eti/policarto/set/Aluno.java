@@ -25,6 +25,7 @@ public class Aluno {
         return "[Aluno: " + this.nome + ", matricula: " + this.numeroMatricula + "]";
     }
 
+    //https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
