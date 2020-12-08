@@ -1,6 +1,9 @@
 package eti.policarto.set;
 
+import eti.policarto.list.curso.Aula;
+
 import java.util.*;
+import java.util.function.Consumer;
 
 public class Main {
 
@@ -29,6 +32,12 @@ public class Main {
 
         boolean matriculado = cursoJavaColecoes.alunoEstaMatriculado(a4);
         System.out.println(matriculado);
+
+        Consumer<Aula> consumer = System.out::println;
+
+        cursoJavaColecoes.getAulas().forEach(System.out::println);
+
+        new Thread(() -> System.out.println("Executando um Runnable")).start();
 
 
     }
