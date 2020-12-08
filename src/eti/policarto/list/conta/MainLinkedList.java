@@ -1,4 +1,4 @@
-package eti.policarto.arrays.conta;
+package eti.policarto.list.conta;
 
 import java.util.LinkedList;
 

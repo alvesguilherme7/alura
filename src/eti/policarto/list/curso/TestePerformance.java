@@ -1,4 +1,4 @@
-package eti.policarto.arrays.curso;
+package eti.policarto.list.curso;
 
 import java.util.ArrayList;
 import java.util.Comparator;

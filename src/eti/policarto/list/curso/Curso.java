@@ -1,4 +1,4 @@
-package eti.policarto.arrays.curso;
+package eti.policarto.list.curso;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -39,5 +39,15 @@ public class Curso {
 
     public static int getTempoTotalStatic(Curso curso){
         return curso.aulas.stream().mapToInt(Aula::getTempo).sum();
+    }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "nome='" + nome + '\'' +
+                ", instrutor='" + instrutor + '\'' +
+                ", aulas=" + aulas +
+                ", tempoTotal=" + tempoTotal +
+                '}';
     }
 }

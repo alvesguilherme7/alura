@@ -1,4 +1,4 @@
-package eti.policarto.arrays.conta;
+package eti.policarto.list.conta;
 
 public class ContaCorrente extends Conta {
     public ContaCorrente(int agencia, int numero) {

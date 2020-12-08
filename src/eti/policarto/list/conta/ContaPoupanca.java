@@ -1,4 +1,4 @@
-package eti.policarto.arrays.conta;
+package eti.policarto.list.conta;
 
 public class ContaPoupanca extends Conta {
     public ContaPoupanca(int agencia, int numero) {

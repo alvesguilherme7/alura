@@ -1,4 +1,4 @@
-package eti.policarto.arrays.curso;
+package eti.policarto.list.curso;
 
 public class TestaCurso {
     public static void main(String[] args) {

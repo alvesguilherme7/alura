@@ -1,4 +1,4 @@
-package eti.policarto.arrays.curso;
+package eti.policarto.list.curso;
 
 public class Aula implements Comparable<Aula> {
 
