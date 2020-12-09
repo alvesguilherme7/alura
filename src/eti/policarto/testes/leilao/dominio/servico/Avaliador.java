@@ -15,4 +15,13 @@ public class Avaliador {
 
     public double getMaiorLance() { return maiorDeTodos; }
     public double getMenorLance() { return menorDeTodos; }
+    public double getMediaLance(Leilao leilao) {
+        return
+            leilao
+            .getLances()
+            .stream()
+            .mapToDouble(Lance::getValor)
+            .average()
+            .orElse(0.0);
+    }
 }
