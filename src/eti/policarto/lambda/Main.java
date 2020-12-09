@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -18,9 +19,9 @@ public class Main {
 
         palavras.forEach(System.out::println);
 
-        Curso curso1 = new Curso("A",123);
-        Curso curso2 = new Curso("B",90);
-        Curso curso3 = new Curso("C",150);
+        Curso curso1 = new Curso("Java",123);
+        Curso curso2 = new Curso("Java EE",90);
+        Curso curso3 = new Curso("CI/CD",150);
 
         List<Curso> cursos = new ArrayList<>();
         cursos.add(curso1);
@@ -39,6 +40,11 @@ public class Main {
             .map(Curso::getAlunos)
             .forEach(System.out::println);
 
+        cursos = cursos
+                    .stream()
+                    .filter(c -> c.getAlunos() >= 100)
+                    .collect(Collectors.toList());
+
 
         Optional<Curso> safeCurso = cursos
                 .stream()
@@ -54,6 +60,15 @@ public class Main {
         }catch (Exception e){
             System.err.println(e.getMessage());
         }
+
+        cursos
+            .stream()
+            .filter(c -> c.getAlunos() >= 100)
+            .collect(Collectors.toMap(
+                    Curso::getNome,
+                    Curso::getAlunos
+            ))
+            .forEach((curso, alunos) -> System.out.println("Curso "+ curso + " tem "+ alunos +" alunos."));
 
 
     }
