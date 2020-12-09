@@ -70,6 +70,13 @@ public class Main {
             ))
             .forEach((curso, alunos) -> System.out.println("Curso "+ curso + " tem "+ alunos +" alunos."));
 
+        cursos
+            .stream()
+            .mapToInt(Curso::getAlunos)
+            .average()
+            .ifPresent(System.out::println);
+
+
 
     }
 }
