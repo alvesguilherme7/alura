@@ -1,8 +1,6 @@
 package eti.policarto.data;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Period;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 public class Main {
@@ -29,6 +27,10 @@ public class Main {
 
         LocalDateTime agora = LocalDateTime.now();
         System.out.println(agora.format(brazilianFormatter));
+
+        MonthDay monthDay = MonthDay.of(9,21);
+
+        System.out.println(monthDay.toString());
 
     }
 }
