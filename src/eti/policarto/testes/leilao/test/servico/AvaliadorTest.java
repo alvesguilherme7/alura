@@ -286,6 +286,25 @@ public class AvaliadorTest {
         assertEquals(701.0, lances.get(9).getValor(), 0.00001);
     }
 
+    @Test
+    public void testeDobraLance(){
+        Usuario billGates = new Usuario("Bill Gates");
+        Usuario steveJobs = new Usuario("Steve Jobs");
+
+        Leilao leilao = new Leilao("Xbox One");
+
+        leilao.propoe(new Lance(steveJobs, 300.0));
+        leilao.propoe(new Lance(billGates, 301.0));
+
+        leilao.dobraUltimoLance(steveJobs);
+
+        List<Lance> lances = leilao.getLances();
+
+        assertEquals(3, lances.size());
+        assertEquals(600.0, lances.get(2).getValor(), 0.00001);
+
+    }
+
 
 
 }
