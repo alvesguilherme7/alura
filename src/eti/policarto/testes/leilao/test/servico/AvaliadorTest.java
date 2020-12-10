@@ -240,4 +240,52 @@ public class AvaliadorTest {
         assertEquals(0, maiores.size());
     }
 
+    @Test
+    public void naoDeveAceitarDoisLancesSeguidosDoMesmoUsuario(){
+        Usuario billGates = new Usuario("Bill Gates");
+
+        Leilao leilao = new Leilao("Xbox One");
+
+        leilao.propoe(new Lance(billGates, 300.));
+        leilao.propoe(new Lance(billGates, 400.));
+
+        List<Lance> lances = leilao.getLances();
+
+        assertEquals(1, lances.size());
+        assertEquals(300.0, lances.get(0).getValor(), 0.00001);
+    }
+
+    @Test
+    public void naoDeveAceitarMaisDoQue5LancesDeUmMesmoUsuario(){
+        Usuario billGates = new Usuario("Bill Gates");
+        Usuario steveJobs = new Usuario("Steve Jobs");
+
+        Leilao leilao = new Leilao("Xbox One");
+
+        leilao.propoe(new Lance(steveJobs, 300.));
+        leilao.propoe(new Lance(billGates, 301.));
+
+        leilao.propoe(new Lance(steveJobs, 400.));
+        leilao.propoe(new Lance(billGates, 401.));
+
+        leilao.propoe(new Lance(steveJobs, 500.));
+        leilao.propoe(new Lance(billGates, 501.));
+
+        leilao.propoe(new Lance(steveJobs, 600.));
+        leilao.propoe(new Lance(billGates, 601.));
+
+        leilao.propoe(new Lance(steveJobs, 700.));
+        leilao.propoe(new Lance(billGates, 701.));
+
+        // sem lances permitidos
+        leilao.propoe(new Lance(steveJobs, 800));
+
+        List<Lance> lances = leilao.getLances();
+
+        assertEquals(10, lances.size());
+        assertEquals(701.0, lances.get(9).getValor(), 0.00001);
+    }
+
+
+
 }
