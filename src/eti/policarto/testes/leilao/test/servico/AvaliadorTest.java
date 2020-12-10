@@ -279,6 +279,14 @@ public class AvaliadorTest {
 
     }
 
+    @Test(expected = RuntimeException.class)
+    public void naoDeveAceitarAvaliarSemLances(){
+        Leilao leilao = new CriadorLeilao()
+                .para("Xbox One")
+                .concluir();
+        leiloeiro.avalia(leilao);
+    }
+
 
 
 }
