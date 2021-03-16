@@ -3,6 +3,7 @@ package eti.policarto.list.conta;
 import eti.policarto.herancaconta.model.Cliente;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainArrayList2 {
     public static void main(String[] args) {
@@ -27,7 +28,7 @@ public class MainArrayList2 {
 
         System.out.println(contas);
 
-//        Collections.rotate(contas, 1);
+        Collections.rotate(contas, 1);
 //
 //        System.out.println(contas);
 
