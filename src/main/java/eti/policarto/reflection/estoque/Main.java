@@ -21,7 +21,7 @@ public class Main {
 		try (Scanner s = new Scanner(System.in)) {
 			String url = s.nextLine();
 			
-			Alurator alurator = new Alurator("br.com.alura.estoque.controle.");
+			Alurator alurator = new Alurator("eti.policarto.reflection.estoque.controle.");
 			while (!url.equals("exit")) {
 				Object response = alurator.executa(url);
 				
