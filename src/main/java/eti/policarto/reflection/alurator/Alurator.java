@@ -1,46 +1,27 @@
 package eti.policarto.reflection.alurator;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
+import eti.policarto.reflection.alurator.protocolo.Request;
+import eti.policarto.reflection.alurator.reflexao.Reflexao;
 
 public class Alurator {
 	
-	private String pacoteBase;
+	private final String PACOTEBASE;
 
 	public Alurator(String pacoteBase) {
-		this.pacoteBase = pacoteBase;
+		this.PACOTEBASE = pacoteBase;
 	}
 	
 	public Object executa(String url) {
-		// TODO - processa a requisicao executando o metodo
-		// da classe em questao
-		
-		// Produto lista
-		
-		// produto -> roduto
-		
-		String[] partesUrl = url.replaceFirst("/", "")
-								.split("/");
-		
-		String nomeControle = Character.toUpperCase(partesUrl[0].charAt(0)) + 
-								partesUrl[0].substring(1) + "Controller";
-		
-		try {
-			Class<?> classeControle = Class.forName(pacoteBase + nomeControle);
 
-			Constructor<?> constructor = classeControle.getConstructor();
+		String nomeControle = new Request(url).getNomeControle();
 
-			Object instanciaControle = constructor.newInstance();
-			
-			System.out.println(instanciaControle);
-			
-			return null;
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException e ) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (InvocationTargetException e){
-			e.printStackTrace();
-			throw new RuntimeException("Erro no construtor.", e.getTargetException());
-		}
+		Object instanciaControle = new Reflexao()
+				.refletirClasse(this.PACOTEBASE + nomeControle)
+				.getConstrutorPadrao()
+				.instanciar();
+
+		System.out.println(instanciaControle);
+
+		return instanciaControle;
 	}
 }

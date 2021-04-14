@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+
 public class Main {
     public static void main(String[] args) throws Exception {
         List<String> palavras = new ArrayList<>();
@@ -54,7 +55,7 @@ public class Main {
         Consumer<Curso> consumer = Curso::getNome;
         safeCurso.ifPresent(consumer);
 
-        Supplier<Exception> supplier = () -> new Exception("Não encontrei nada.");
+        Supplier<Exception> supplier = () -> new Exception("Nï¿½o encontrei nada.");
         try{
             safeCurso.orElseThrow(supplier);
         }catch (Exception e){
