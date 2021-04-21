@@ -9,6 +9,11 @@ public class Main {
         contas[0] = contaCorrente;
         contas[0].setAgencia(2);
         System.out.println(contaCorrente.getAgencia());
+
+        int i = 5;
+        i =+ 10;
+
+        System.out.println(i);
     }
 }
 

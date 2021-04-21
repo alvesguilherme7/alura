@@ -17,7 +17,7 @@ public class Main {
 		 * /controlador/metodo
 		 * /controlador/metodo?param1=valor1&param2=valor2
 		 */
-		
+
 		try (Scanner s = new Scanner(System.in)) {
 			String url = s.nextLine();
 			
